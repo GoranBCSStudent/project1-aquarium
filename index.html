@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seaside Aquarium</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" type="text/css">	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6sHqV2MwCUtj2P2nHLian48YpaD6OpE4&callback=initMap">		
+	</script>
+	<script type="text/javascript">
+		function initMap() {			
+			var uluru = {lat: 45.648900, lng:13.762560};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 16,
+				center: uluru
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map
+			});
+		}
+	</script>
+	<style type="text/css">	
+	footer {
+		background-color: #646C74;
+		color: #D5DFE3;
+		line-height: 90px;
+	}
+	.textCenter {			
+		text-align: center;
+	}
+	.topbar {
+		background-color: #3A424A;
+		color: #777A6A;			
+	}
+	.title {
+		font-weight: bold;
+		color: whitesmoke;		
+	}
+	.headerTitle {		
+		font-family: Bungee;	
+	}
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+	#mainContainer {
+		background: url('./images/header.jpg');
+		height: 700px;
+		line-height: 400px;		
+		background-size: cover;		
+	}	
+	#topbarHeader {			
+		line-height: 60px;
+		margin: 0px;
+	}
+	#mainContainer {
+		margin: 0 0%;
+	}
+</style>
+</head>
+<body>
+	<div id="navContainer topbar">
+
+		<nav class="navbar navbar-expand-lg navbar-light topbar">			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="title">Seaside Aquarium</span> <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link1</a>
+					</li>					
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link2</a>
+					</li>					
+				</ul>
+
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+		
+	</div>
+	<div id="mainContainer" class="textCenter">		
+		<div class="h1 headerTitle" style="padding-top: 100px;">Seaside Aquarium</div>
+		<div class="h3 title headerTitle">Underwater world</div>		
+		<div>
+			<button type="button" class="btn btn-primary align-top title" onclick="myMap">Get to know animals </button>
+		</div>
+	</div>	
+
+	<div>
+		<div class="h1 headerTitle textCenter" style="padding-top: 20px;">How to find us</div>
+		<div id="map"></div>
+		<div>
+			<p class="fon">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+			<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+		</div>
+	</div>
+
+	<div>
+		<div class="h1 headerTitle textCenter" style="padding-top: 20px;">Gallery</div>
+
+		<div>
+			<p class="fon">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+			<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+		</div>
+	</div>
+
+	<div>
+		<div class="h1 headerTitle textCenter" style="padding-top: 20px;">Animals</div>
+
+		<div>
+			<p class="fon">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+			<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque eros, rhoncus id mollis semper, gravida vel dui. Suspendisse ac accumsan dolor. Etiam molestie justo vitae dui gravida egestas. Sed faucibus tortor erat, in egestas mi mattis vel. Cras placerat sem sed est ornare condimentum. Suspendisse venenatis et urna at ullamcorper. Vivamus tincidunt in neque at laoreet. In ut risus quis magna ullamcorper interdum sit amet nec mi. Mauris vitae magna nibh. Phasellus pretium leo turpis, vitae semper elit feugiat pharetra. Nam at lacus felis. Pellentesque imperdiet tempor erat, non accumsan quam ultricies et.</p>
+		</div>
+	</div>
+
+</body>
+<footer>
+	<div class="textCenter">© 2017 BCS Student Team</div>		
+</footer>
+</html>
